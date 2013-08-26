@@ -15,10 +15,7 @@
     "type" : "git",
     "url" : "git://git@bitbucket.org:wielkiborsuk/empty-node-server.git"
   },
-  "bugs" : {
-    "web" : ""
-  },
   "dependencies" : {
-    "express" : ">=3.3.5",
+    "express" : ">=3.3.5"
   }
 }
