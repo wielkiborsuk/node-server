@@ -1,0 +1,24 @@
+{
+  "name" : "empty-node-server",
+  "description" : "nodejs server for static/module container purposes",
+  "version" : "0.5.0",
+  "main" : "./server.js",
+  "author" : {
+    "name" : "wielki.borsuk",
+    "email" : "wielki.borsuk@gmail.com"
+  },
+  "keywords" : [ ],
+  "licenses" : {
+    "type" : "none"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "git://git@bitbucket.org:wielkiborsuk/empty-node-server.git"
+  },
+  "bugs" : {
+    "web" : ""
+  },
+  "dependencies" : {
+    "express" : ">=3.3.5",
+  }
+}

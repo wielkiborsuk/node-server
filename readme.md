@@ -1,0 +1,1 @@
+ready to deploy, empty nodejs server - container for all those nodejs based modules that you create instead of running separate server for every application
