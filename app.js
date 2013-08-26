@@ -2,8 +2,6 @@ var express = require('express'),
 	util = require('./util');
 
 var app = express();
-console.log(util);
-console.log(util.wwwbase)
 
 app.configure(function () {
 	app.use(express.favicon())

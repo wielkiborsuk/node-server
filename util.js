@@ -36,5 +36,5 @@ module.exports = {
 		return false
 	},
     wwwbase: '../web',
-    port: 80 
+    port: 8080
 }
