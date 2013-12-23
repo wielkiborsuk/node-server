@@ -35,7 +35,37 @@ module.exports = {
 		}
 		return false
 	},
-    wwwbase: '../web',
+  defaultHandler: function (req, res, next) {
+		res.header('Access-Control-Allow-Origin', '*');
+		res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+		res.header('Access-Control-Allow-Headers', 'Content-Type, Range, X-Requested-With');
+		if (req.method == "OPTIONS") {
+			res.send(200);
+		} else {
+			next();
+		}
+	},
+  www : {
+    base: '../web',
+    url: '/www',
     port: 8080,
     port2: 8081
+  },
+  users: {
+    'borsuk': 'pass',
+    'foo': 'foo'
+  },
+  upload: {
+    uploadDir: '../web',
+    uploadUrl: '/www/upload'
+    url: '/upload',
+  },
+  chat: {
+    url: '/chat'
+  },
+  player: {
+    url: '/player',
+    basepath: '../web',
+    defaultpath: '/upload/'
+  }
 }
