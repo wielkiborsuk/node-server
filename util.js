@@ -57,7 +57,7 @@ module.exports = {
   },
   upload: {
     uploadDir: '../web',
-    uploadUrl: '/www/upload'
+    uploadUrl: '/www/upload',
     url: '/upload',
   },
   chat: {
@@ -67,5 +67,20 @@ module.exports = {
     url: '/player',
     basepath: '../web',
     defaultpath: '/upload/'
+  },
+  poet: {
+    url: '/weblog',
+    path: './poet-blog',
+    config: {
+      posts: './poet-blog/posts',
+      metaFormat: 'json',
+      postsPerPage: 5,
+      routes: {
+        '/weblog/posts/:post': 'post',
+        '/weblog/tags/:tag': 'tag',
+        '/weblog/pagination/:page': 'page',
+        '/weblog/categories/:category': 'category'
+      }
+    }
   }
 }

@@ -3,6 +3,7 @@ var express = require('express'),
 	util = require('./util');
 
 var app = express();
+
 app.configure(function () {
 	app.use(express.favicon())
 
@@ -33,6 +34,16 @@ app.configure(function () {
   try {
     var player = require('player-server');
     app.use(util.player.url, player(util.player))
+  } catch (e) { }
+
+  // POET - initialization of poet
+  try {
+    var poet = require('poet')(app, util.poet.config);
+    poet.init(function () { });
+    app.set('view engine', 'jade');
+    app.set('views', util.poet.path+'/views');
+    app.use(express.static(util.poet.path+'/public'));
+    app.get(util.poet.url, function (req, res) { res.render('index'); });
   } catch (e) { }
 	
 	app.use(function (req, res) {
