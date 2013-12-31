@@ -70,9 +70,9 @@ module.exports = {
   },
   poet: {
     url: '/weblog',
-    path: './poet-blog',
+    path: '../poet-web-log',
     config: {
-      posts: './poet-blog/posts',
+      posts: '../poet-web-log/posts',
       metaFormat: 'json',
       postsPerPage: 5,
       routes: {
